@@ -13,8 +13,7 @@ function App({ history }) {
     <>
       <Router history={history}>
         <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route path="/users" element={<MainHomepage />} />
+          <Route exact path="/" element={<MainHomepage />} />
           <Route path="/users/find" element={<FindRecipe />} />
           <Route path="/users/submit" element={<SubmitPage />} />
           <Route path="/users/foundrecipes" element={<FoundRecipes />} />

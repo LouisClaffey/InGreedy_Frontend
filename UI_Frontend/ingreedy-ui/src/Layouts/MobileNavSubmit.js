@@ -33,7 +33,7 @@ export default function MobileNavSubmit() {
   };
 
   const navToHome = () => {
-    navigate("/users");
+    navigate("/");
   };
 
   return (

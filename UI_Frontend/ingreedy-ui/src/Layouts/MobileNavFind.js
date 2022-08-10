@@ -33,7 +33,7 @@ export default function MobileNavFind() {
   };
 
   const navToHome = () => {
-    navigate("/users");
+    navigate("/");
   };
 
   return (

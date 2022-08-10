@@ -86,7 +86,7 @@ export default function FindRecipe() {
   };
 
   const navToHome = () => {
-    navigate("/users");
+    navigate("/");
   };
 
   const handleDrawerOpen = () => {

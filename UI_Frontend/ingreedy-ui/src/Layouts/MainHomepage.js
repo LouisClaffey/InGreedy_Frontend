@@ -89,11 +89,6 @@ export default function MainHomepage() {
   };
 
   const navToHome = () => {
-    navigate("/users");
-  };
-
-  const navLogout = () => {
-    AuthenticationService.logout();
     navigate("/");
   };
 
@@ -171,14 +166,6 @@ export default function MainHomepage() {
                 <ListItemButton onClick={navToHome}>
                   <ListItemIcon>{<HomeIcon />}</ListItemIcon>
                   <ListItemText primary="Home" />
-                </ListItemButton>
-              </ListItem>
-            </List>
-            <List>
-              <ListItem>
-                <ListItemButton onClick={navLogout}>
-                  <ListItemIcon>{<LogoutIcon />}</ListItemIcon>
-                  <ListItemText primary="Logout" />
                 </ListItemButton>
               </ListItem>
             </List>

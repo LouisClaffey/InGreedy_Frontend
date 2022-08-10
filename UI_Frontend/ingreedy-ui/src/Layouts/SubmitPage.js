@@ -86,7 +86,7 @@ export default function SubmitPage() {
   };
 
   const navToHome = () => {
-    navigate("/users");
+    navigate("/");
   };
 
   const handleDrawerOpen = () => {

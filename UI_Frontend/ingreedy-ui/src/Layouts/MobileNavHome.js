@@ -35,11 +35,6 @@ export default function MobileNavHome() {
   };
 
   const navToHome = () => {
-    navigate("/users");
-  };
-
-  const navLogout = () => {
-    AuthenticationService.logout();
     navigate("/");
   };
 
@@ -89,12 +84,6 @@ export default function MobileNavHome() {
             label="Home"
             value="home"
             icon={<HomeIcon />}
-          />
-          <BottomNavigationAction
-            onClick={navLogout}
-            label="Logout"
-            value="logout"
-            icon={<LogoutIcon />}
           />
         </BottomNavigation>
       </Paper>

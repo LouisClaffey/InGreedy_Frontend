@@ -75,7 +75,7 @@ export default function IngredientsTableSubmit() {
     e.preventDefault();
     axios
       .post("https://ingreedy-backend.herokuapp.com/recipes", recipe)
-      .then(() => navigate("/users"));
+      .then(() => navigate("/"));
   };
 
   useEffect(() => {
