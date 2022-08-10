@@ -16,7 +16,7 @@ export default function RecipesFoundMobile() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/users/found")
+      .get("https://ingreedy-backend.herokuapp.com/users/found")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);

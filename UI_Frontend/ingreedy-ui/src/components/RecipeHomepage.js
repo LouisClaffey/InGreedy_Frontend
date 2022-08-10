@@ -22,7 +22,7 @@ export default function Recipes() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/users/home")
+      .get("https://ingreedy-backend.herokuapp.com/users/home")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);
