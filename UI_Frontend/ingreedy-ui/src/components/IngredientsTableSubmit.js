@@ -53,13 +53,13 @@ export default function IngredientsTableSubmit() {
   const [noneArr, setNoneArr] = useState([]);
 
   const recipe = {
-    title,
+    // title,
     grains,
     proteins,
     vegetables,
     dairies,
     fruits,
-    instructions,
+    // instructions,
   };
 
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function IngredientsTableSubmit() {
     <>
       <form onSubmit={formik.handleSubmit}>
         <Container maxWidth="sm">
-          <Grid
+          {/* <Grid
             item
             md={12}
             sm={12}
@@ -146,7 +146,7 @@ export default function IngredientsTableSubmit() {
             {formik.touched.recipeTitle && formik.errors.recipeTitle ? (
               <Alert severity="error">{formik.errors.recipeTitle}</Alert>
             ) : null}
-          </Grid>
+          </Grid> */}
           <Typography
             variant="subtitle2"
             style={{ textAlign: "center", opacity: 0.5, marginTop: 10 }}
@@ -609,7 +609,7 @@ export default function IngredientsTableSubmit() {
               <Alert severity="error">{formik.errors.recipeInstructions}</Alert>
             ) : null}
           </Grid>
-          <Grid
+          {/* <Grid
             container
             justifyContent={"center"}
             itemitem
@@ -626,7 +626,7 @@ export default function IngredientsTableSubmit() {
                 Click to submit recipe
               </Button>
             </div>
-          </Grid>
+          </Grid> */}
         </Container>
       </form>
     </>
