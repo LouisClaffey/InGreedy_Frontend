@@ -39,10 +39,7 @@ export default function IngredientsTableFind() {
   const handleClick = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://ingreedy-backend.herokuapp.com/public.ingredients",
-        ingredients
-      )
+      .post("https://ingreedy-backend.herokuapp.com/ingredients", ingredients)
       .then(() => navigate("/users/foundrecipes"));
   };
 
