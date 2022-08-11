@@ -16,7 +16,6 @@ import * as Yup from "yup";
 import { Alert } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import { ContactlessOutlined } from "@material-ui/icons";
 
 export default function IngredientsTableSubmit() {
   const [formValue, setFormValue] = useState({
@@ -53,13 +52,13 @@ export default function IngredientsTableSubmit() {
   const [noneArr, setNoneArr] = useState([]);
 
   const recipe = {
-    // title,
+    title,
     grains,
     proteins,
     vegetables,
     dairies,
     fruits,
-    // instructions,
+    instructions,
   };
 
   useEffect(() => {
@@ -99,31 +98,30 @@ export default function IngredientsTableSubmit() {
 
   const { recipeTitle, recipeInstructions } = formValue;
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     recipeTitle: "",
-  //     recipeInstructions: "",
-  //   },
-  //   validationSchema: Yup.object({
-  //     recipeTitle: Yup.string()
-  //       .max(100, "Must be less than 100 characters")
-  //       .min(5, "Must be 5 characters or more")
-  //       .required("Required"),
-  //     recipeInstructions: Yup.string()
-  //       .min(100, "Instructions must be over 100 characters")
-  //       .required("Required"),
-  //   }),
-  //   onSubmit: (values) => {
-  //     alert(JSON.stringify(values, null, 2));
-  //   },
-  // });
+  const formik = useFormik({
+    initialValues: {
+      recipeTitle: "",
+      recipeInstructions: "",
+    },
+    validationSchema: Yup.object({
+      recipeTitle: Yup.string()
+        .max(100, "Must be less than 100 characters")
+        .min(5, "Must be 5 characters or more")
+        .required("Required"),
+      recipeInstructions: Yup.string()
+        .min(100, "Instructions must be over 100 characters")
+        .required("Required"),
+    }),
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <>
-      {/* <form onSubmit={formik.handleSubmit}> */}
-      <form>
+      <form onSubmit={formik.handleSubmit}>
         <Container maxWidth="sm">
-          {/* <Grid
+          <Grid
             item
             md={12}
             sm={12}
@@ -147,7 +145,7 @@ export default function IngredientsTableSubmit() {
             {formik.touched.recipeTitle && formik.errors.recipeTitle ? (
               <Alert severity="error">{formik.errors.recipeTitle}</Alert>
             ) : null}
-          </Grid> */}
+          </Grid>
           <Typography
             variant="subtitle2"
             style={{ textAlign: "center", opacity: 0.5, marginTop: 10 }}
@@ -581,7 +579,7 @@ export default function IngredientsTableSubmit() {
               </RadioGroup>
             </FormControl>
           </Grid>
-          {/* <Grid
+          <Grid
             item
             md={12}
             sm={12}
@@ -609,7 +607,7 @@ export default function IngredientsTableSubmit() {
             formik.errors.recipeInstructions ? (
               <Alert severity="error">{formik.errors.recipeInstructions}</Alert>
             ) : null}
-          </Grid> */}
+          </Grid>
           <Grid
             container
             justifyContent={"center"}

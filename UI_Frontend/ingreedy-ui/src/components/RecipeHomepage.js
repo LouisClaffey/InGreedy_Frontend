@@ -51,7 +51,7 @@ export default function Recipes() {
           <Item style={{ marginBottom: "2rem" }}>
             <Grid key={recipes.id} container>
               <Grid item lg={12} md={12} sm={12} xs={12}>
-                {/* <Typography
+                <Typography
                   variant="h3"
                   style={{
                     textAlign: "center",
@@ -61,7 +61,7 @@ export default function Recipes() {
                   }}
                 >
                   {recipes?.title.toLowerCase()}
-                </Typography> */}
+                </Typography>
               </Grid>
               <Grid
                 item
@@ -102,9 +102,9 @@ export default function Recipes() {
                 </TableContainer>
               </Grid>
               <Grid item xs={12} style={{ paddingBottom: 20 }}>
-                {/* <Typography variant="subtitle1">
+                <Typography variant="subtitle1">
                   {recipes?.instructions}
-                </Typography> */}
+                </Typography>
               </Grid>
             </Grid>
           </Item>
