@@ -110,6 +110,7 @@ export default function IngredientsTableSubmit() {
         .required("Required"),
       recipeInstructions: Yup.string()
         .min(100, "Instructions must be over 100 characters")
+        .max(255, "Instructions must be under 255 characters")
         .required("Required"),
     }),
     onSubmit: (values) => {
