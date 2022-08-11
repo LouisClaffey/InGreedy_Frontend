@@ -39,9 +39,16 @@ export default function IngredientsTableFind() {
   const handleClick = (e) => {
     e.preventDefault();
     axios
-      .post("https://ingreedy-backend.herokuapp.com/ingredients", ingredients)
+      .post("http://ingreedy-backend.herokuapp.com/ingredients", ingredients)
       .then(() => navigate("/users/foundrecipes"));
   };
+
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post("http://localhost:8080/ingredients", ingredients)
+  //     .then(() => navigate("/users/foundrecipes"));
+  // };
 
   useEffect(() => {
     if (

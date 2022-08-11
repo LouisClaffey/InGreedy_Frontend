@@ -15,7 +15,7 @@ export default function RecipesMobile() {
 
   useEffect(() => {
     axios
-      .get("https://ingreedy-backend.herokuapp.com/users/home")
+      .get("http://ingreedy-backend.herokuapp.com/users/home")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);
@@ -24,6 +24,18 @@ export default function RecipesMobile() {
         console.log(error);
       });
   }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/users/home")
+  //     .then((response) => {
+  //       const recipeResponse = response.data;
+  //       setRecipes(recipeResponse);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   return (
     <>

@@ -23,7 +23,7 @@ export default function RecipesFound() {
 
   useEffect(() => {
     axios
-      .get("https://ingreedy-backend.herokuapp.com/users/found")
+      .get("http://ingreedy-backend.herokuapp.com/users/found")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);
@@ -35,6 +35,21 @@ export default function RecipesFound() {
         console.log(error);
       });
   }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/users/found")
+  //     .then((response) => {
+  //       const recipeResponse = response.data;
+  //       setRecipes(recipeResponse);
+  //       if (recipeResponse.length === 0) {
+  //         setNoResutls("No such recipe exists.");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   return (
     <>
