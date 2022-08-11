@@ -15,7 +15,7 @@ export default function RecipesMobile() {
 
   useEffect(() => {
     axios
-      .get("http://ingreedy-backend.herokuapp.com/users/home")
+      .get("https://ingreedy-backend.herokuapp.com/users/home")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);

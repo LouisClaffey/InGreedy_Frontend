@@ -23,7 +23,7 @@ export default function RecipesFound() {
 
   useEffect(() => {
     axios
-      .get("http://ingreedy-backend.herokuapp.com/users/found")
+      .get("https://ingreedy-backend.herokuapp.com/users/found")
       .then((response) => {
         const recipeResponse = response.data;
         setRecipes(recipeResponse);
