@@ -620,8 +620,7 @@ export default function IngredientsTableSubmit() {
               <Button
                 variant="contained"
                 onClick={handleClick}
-                // disabled={!formik.isValid || !validated || noneArr.length > 2}
-                disabled={!validated || noneArr.length > 2}
+                disabled={!formik.isValid || !validated || noneArr.length > 2}
               >
                 Click to submit recipe
               </Button>
