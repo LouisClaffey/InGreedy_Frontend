@@ -99,28 +99,29 @@ export default function IngredientsTableSubmit() {
 
   const { recipeTitle, recipeInstructions } = formValue;
 
-  const formik = useFormik({
-    initialValues: {
-      recipeTitle: "",
-      recipeInstructions: "",
-    },
-    validationSchema: Yup.object({
-      recipeTitle: Yup.string()
-        .max(100, "Must be less than 100 characters")
-        .min(5, "Must be 5 characters or more")
-        .required("Required"),
-      recipeInstructions: Yup.string()
-        .min(100, "Instructions must be over 100 characters")
-        .required("Required"),
-    }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  // const formik = useFormik({
+  //   initialValues: {
+  //     recipeTitle: "",
+  //     recipeInstructions: "",
+  //   },
+  //   validationSchema: Yup.object({
+  //     recipeTitle: Yup.string()
+  //       .max(100, "Must be less than 100 characters")
+  //       .min(5, "Must be 5 characters or more")
+  //       .required("Required"),
+  //     recipeInstructions: Yup.string()
+  //       .min(100, "Instructions must be over 100 characters")
+  //       .required("Required"),
+  //   }),
+  //   onSubmit: (values) => {
+  //     alert(JSON.stringify(values, null, 2));
+  //   },
+  // });
 
   return (
     <>
-      <form onSubmit={formik.handleSubmit}>
+      {/* <form onSubmit={formik.handleSubmit}> */}
+      <form>
         <Container maxWidth="sm">
           {/* <Grid
             item
@@ -580,7 +581,7 @@ export default function IngredientsTableSubmit() {
               </RadioGroup>
             </FormControl>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             md={12}
             sm={12}
@@ -608,8 +609,8 @@ export default function IngredientsTableSubmit() {
             formik.errors.recipeInstructions ? (
               <Alert severity="error">{formik.errors.recipeInstructions}</Alert>
             ) : null}
-          </Grid>
-          {/* <Grid
+          </Grid> */}
+          <Grid
             container
             justifyContent={"center"}
             itemitem
@@ -621,12 +622,13 @@ export default function IngredientsTableSubmit() {
               <Button
                 variant="contained"
                 onClick={handleClick}
-                disabled={!formik.isValid || !validated || noneArr.length > 2}
+                // disabled={!formik.isValid || !validated || noneArr.length > 2}
+                disabled={!validated || noneArr.length > 2}
               >
                 Click to submit recipe
               </Button>
             </div>
-          </Grid> */}
+          </Grid>
         </Container>
       </form>
     </>
