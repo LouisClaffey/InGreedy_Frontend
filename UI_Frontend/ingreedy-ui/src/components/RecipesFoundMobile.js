@@ -49,7 +49,17 @@ export default function RecipesFoundMobile() {
       {recipes &&
         recipes.map((recipes) => (
           <Item style={{ marginBottom: "4rem" }}>
-            <Grid key={recipes.id} container>
+            <Grid
+              key={recipes.id}
+              container
+              style={{
+                whiteSpace: "pre-wrap" /* css-3 */,
+                whiteSpace: "-moz-pre-wrap " /* Mozilla, since 1999 */,
+                whiteSpace: " -pre-wrap" /* Opera 4-6 */,
+                whiteSpace: "-o-pre-wrap " /* Opera 7 */,
+                wordWrap: "break-word",
+              }}
+            >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h3"
